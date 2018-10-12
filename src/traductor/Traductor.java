@@ -12,9 +12,9 @@ public class Traductor {
 
             String letra=cadena.substring(i-1,i);
 
-            if(letra.matches("[a-z]")){
+            if(letra.matches("[a-z]") || letra.equals("ñ")){
                 cadenaFinal = cadenaFinal + abecedario.substring(patronDeSustitucion.indexOf(letra),patronDeSustitucion.indexOf(letra)+1);
-            }else if(letra.matches("[A-Z]")){
+            }else if(letra.matches("[A-Z]") || letra.equals("Ñ")){
                 cadenaFinal = cadenaFinal + abecedario.toUpperCase().substring(patronDeSustitucion.toUpperCase().indexOf(letra),patronDeSustitucion.toUpperCase().indexOf(letra)+1);
             }else{
                 cadenaFinal = cadenaFinal + letra;
